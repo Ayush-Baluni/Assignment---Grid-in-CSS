@@ -1,0 +1,114 @@
+#gallery {
+    display: grid;
+    width: 890px;
+    height: 1140px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin: 10px auto;
+    justify-content:center;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 125px 175px 125px 125px 125px 175px 200px;
+    gap: 1em;
+    border-radius: 7px;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 27%, rgba(253,187,45,1) 100%);
+
+    grid-template-areas: 
+    "a1 a1 a2 a2 a2 a2 a3 a3" 
+    "a1 a1 a2 a2 a2 a2 a3 a3"
+    "a4 a4 a4 a5 a5 a6 a6 a6"
+    "a4 a4 a4 a5 a5 a6 a6 a6"
+    "a7 a7 a8 a8 a9 a9 a9 a9"
+    "a7 a7 a8 a8 a9 a9 a9 a9"
+    "a11 a11 a11 a11 a11 a11 a10 a10";
+}
+
+#head {
+    padding-top: 1px;
+    padding-bottom: 28px;
+    text-align: center;
+    height: 60px;
+    background-color: rgb(81, 135, 81);
+    color: white;
+}
+
+#line {
+    height: 15px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
+}
+
+img {
+    border: 1px solid black;
+    border-radius: 10px;;
+    width: 100%;
+    height: 100%;
+}
+
+.I {
+    grid-area: a1;
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.II {
+    grid-area: a5;
+    grid-column: 4/6;
+    grid-row: 3/5;
+}
+
+.III {
+    grid-area: a3;
+    grid-column: 7/9;
+    grid-row: 1/3;
+}
+
+.IV {
+    grid-area: a9;
+    grid-column: 5/9;
+    grid-row: 5/7;
+}
+
+.V {
+    grid-area:a7;
+    grid-column: 1/3;
+    grid-row: 5/7;
+}
+
+.VI {
+    grid-area: a4;
+    grid-column: 1/4;
+    grid-row: 3/5;
+}
+
+.VII {
+    grid-area: a8;
+    grid-column: 3/5;
+    grid-row: 5/7;
+}
+
+.VIII {
+    grid-area: a6;
+    grid-column: 6/9;
+    grid-row: 3/5;
+}
+
+.IX {
+    grid-area: a10;
+    grid-column: 7/9;
+    grid-row: 7/8;
+}
+
+.X {
+    grid-area: a2;
+    grid-column: 3/7;
+    grid-row: 1/3;
+}
+
+.XI {
+    grid-area: a11;
+    grid-column: 1/7;
+    grid-row: 7/8
+}

@@ -1,0 +1,67 @@
+<!-- 
+ Q. Explain the difference between justify-items and justify-self using code examples. 
+-->
+
+<!--
+Ans.
+
+1. justify-items:
+-> The justify-items property is set on the grid container to give child elements (grid items) alignment in the inline direction. For this property
+ inline direction is left to right and block direction is downward and for this property to have any alignment effect, the grid items need available 
+ space around themselves in the inline direction.
+
+
+2. justify-self;
+-> The justify-self property in CSS sets the justification of an element within its containing block. Its behavior depends on the display of the 
+ containing block. For example, if the containing block is a grid container, we can justify the element in it along the inline axis, which can be 
+ vertical or horizontal based on the content direction.
+
+So the difference is that justify-items applies to the grid container and aligns all grid items inside their respective grid areas along the 
+horizontal axis. While justify-self applies to individual grid items and aligns a single grid item inside its grid area along the horizontal axis.
+
+-->
+
+<!-- Example: -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 100px);
+
+                justify-items: start;  /* justify-items is used to set grid items to the start*/
+                
+                gap: 10px;
+                background-color: #f0f0f0;
+                padding: 10px;
+            }
+            .grid-item {
+                background-color: lightblue;
+                padding: 20px;
+                border: 1px solid #333;
+            }
+            .III {
+                justify-self: center;  /* here justify-self is used to set this grid item to the center horizontally */
+            }
+            .V {
+                justify-self: end;  /* here justify self is used to set this grid item to the end horizontally */
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid-item I">Item 1</div>
+        <div class="grid-item II">Item 2</div>
+        <div class="grid-item III">Item 3</div>
+        <div class="grid-item IV">Item 4</div>
+        <div class="grid-item V">Item 5</div>
+        <div class="grid-item VI">Item 6</div>
+    </div>
+</body>
+</html>

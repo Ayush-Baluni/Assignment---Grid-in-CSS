@@ -1,0 +1,89 @@
+<!-- 
+ Q. Explain the use of grid-auto-row and grid-auto-column using code examples. 
+-->
+
+<!-- 
+ Ans.
+
+1. grid-auto-row:
+-> The grid-auto-rows CSS property is part of the CSS Grid Layout specification, specifying the size of the grid rows that were created without 
+   having an explicit size. In other words, this property sets the size of implicit rows and any other rows that have not been explicitly sized 
+   in the grid-template-rows property.
+
+2. grid-auto-column:
+-> Similar to grid-auto-row property, this is also a part of CSS Grid Layout specification, but instead of speciying size of rows, this property
+   specifies the size of columns without any explicit size.
+
+-->
+
+<!-- Example: -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <style>
+
+            .container {
+                display: grid;
+                grid-template-columns: 100px 100px; 
+                grid-template-rows: 100px;
+                
+                grid-auto-columns: 50px;  /* grid-auto-columns is used here for setting any implicitly created column's width */
+                
+                grid-auto-rows: 150px;  /* grid-auto-rows is used here for setting any implicitly created row's height */
+               
+                gap: 10px; 
+                background-color: #f0f0f0;
+                padding: 20px;
+            }
+            
+            .item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: lightblue;
+                border: 1px solid #000;
+                font-size: 16px;
+            }
+            
+            .item1 {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+            
+            .item2 {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+            
+            .item3 {
+                grid-column: 3 / 4; 
+                grid-row: 1 / 2;
+            }
+            
+            .item4 {
+                grid-column: 1 / 2; 
+                grid-row: 2 / 3; 
+            }
+            
+            .item5 {
+                grid-column: 1 / 2; 
+                grid-row: 3 / 4; 
+            }
+  
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">Item 1</div>
+        <div class="item item2">Item 2</div>
+        <div class="item item3">Item 3</div>
+        <div class="item item4">Item 4</div>
+        <div class="item item5">Item 5</div>
+    </div>
+</body>
+</html>
